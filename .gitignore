@@ -1,0 +1,32 @@
+# Publish only the country prevalence/count workflow and its dependencies.
+# Data, results, figures, logs, environments, and unrelated analyses stay local.
+/*
+!/.gitignore
+!/README.md
+!/scripts/
+/scripts/*
+
+# Upstream environment, database, search, and subject-level processing.
+!/scripts/investigut_environment.sbatch
+!/scripts/investigut_download.sbatch
+!/scripts/investigut_build.sbatch
+!/scripts/investigut_search.sbatch
+!/scripts/filter_gus_hits.py
+!/scripts/investigut_audit.sbatch
+!/scripts/audit_investigut_inputs.py
+!/scripts/build_subject_map.py
+!/scripts/investigut_analysis.sbatch
+!/scripts/analyze_gus.py
+!/scripts/investigut_healthy.sbatch
+!/scripts/analyze_healthy_gus.py
+
+# Country prevalence and healthy-cohort count distribution.
+!/scripts/investigut_plot_country_n30.sbatch
+!/scripts/plot_gus_country_n30.py
+!/scripts/investigut_count_country_n30.sbatch
+!/scripts/plot_healthy_gus_count_country_n30.py
+
+# Required by the existing analysis/plotting scripts.
+!/scripts/gus_plot_labels.py
+!/scripts/country_plot_labels.py
+!/scripts/plot_gus_characteristics.py
