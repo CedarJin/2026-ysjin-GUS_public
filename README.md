@@ -40,12 +40,3 @@ Provide these inputs locally (they are not included in this code-only repository
   caches, metadata, taxonomy tables, and `Leviatan_species_abundance.xlsx`.
 - `reference/cohort_audit/`: `duplicates_table.tsv`,
   `duplicates_table_source.txt`, and `ena_li_nielsen_overlap.tsv` for subject mapping.
-
-The scripts preserve the original analysis paths, job IDs, and cohort-size
-assertions. Update them for a new location or run, and create `logs/` and
-`results/investigut_gus/` before starting. Run analysis on a compute node;
-the supplied UC Davis Hive launchers use the preemptible `low` partition.
-
-Only the selected workflow code and this README are intended for Git.
-Inputs, generated figures/tables, logs, installed software, and unrelated scripts
-are excluded by the `.gitignore` allowlist.
