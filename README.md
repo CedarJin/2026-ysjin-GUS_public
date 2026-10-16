@@ -25,18 +25,17 @@ and counts distinct reference GUS (0–11) per person.
    healthy-cohort country prevalence, then
    `plot_healthy_gus_count_country_n30.py` for the matching count distribution.
 
-Scripts are in `scripts/`; `.sbatch` files are the corresponding HPC launchers.
-`plot_gus_characteristics.py` and the label helpers are retained because the
-healthy-cohort analysis calls them. Existing upstream scripts also produce
-additional summaries as part of their processing.
+Scripts are in `scripts/`; `.sbatch` files are the corresponding HPC launchers. 
 
 ## Requirements and inputs
 
 Python dependencies and DIAMOND are specified in `investigut_environment.sbatch`.
-Provide these inputs locally (they are not included in this code-only repository):
+Provide these inputs locally:
 
 - `reference/active_gus.faa`: the 11 reference sequences with clade/species headers.
 - `software/InvestiGUT/`: upstream software and its protein database, sample
   caches, metadata, taxonomy tables, and `Leviatan_species_abundance.xlsx`.
-- `reference/cohort_audit/`: `duplicates_table.tsv`,
-  `duplicates_table_source.txt`, and `ena_li_nielsen_overlap.tsv` for subject mapping.
+
+## Reference
+Schmitz, M.A., Dimonaco, N.J., Clavel, T. et al. Lineage-specific microbial protein prediction enables large-scale exploration of protein ecology within the human gut. Nat Commun 16, 3204 (2025). https://doi.org/10.1038/s41467-025-58442-w
+
